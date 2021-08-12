@@ -2,7 +2,7 @@
 <html>
 <body>
   <div id="readme" class="readme blob instapaper_body">
-    <article class="markdown-body entry-content" itemprop="text"><h1><a id="user-content-improving-ir-based-bug-localization-with-context-aware-query-reformulation" class="anchor" aria-hidden="true" href="#improving-ir-based-bug-localization-with-context-aware-query-reformulation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>AnsAlpha: Towards Automatic Answering of Developers’ Questions through Comprehension and Generation</h1>
+    <article class="markdown-body entry-content" itemprop="text"><h1><a id="user-content-improving-ir-based-bug-localization-with-context-aware-query-reformulation" class="anchor" aria-hidden="true" href="#improving-ir-based-bug-localization-with-context-aware-query-reformulation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>HintMiner: Automatic Question Hints Mining Through Web Q\&A Resources Comprehension and Generation</h1>
 <h2><a id="user-content-accepted-paper-at-esecfse-2018" class="anchor" aria-hidden="true" href="#accepted-paper-at-esecfse-2018"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The Source Code For AnsAlpha Project</h2>
 
 
@@ -52,10 +52,10 @@ https://www.elastic.co/.
 <p><strong>Project Check</strong></p>
 <ul>
 <li>Prepare Data</li>
-<li>The mentioned neural network models are in ProgrammingAlpha/programmingalpha/models. </li>
-<li>The evaluation metiric tool APIs are in ProgrammingAlpha/programmingalpha/Utility/metrics.py. </li>
-<li>Run the scripts in ProgrammingAlpha/test/db_test/ folder to prepare training data. </li>
-<li>Run the scripts in ProgrammingAlpha/test/text_generation_test/ to build the model mentioned in AnsAlpha. </li>
+<li>The mentioned neural network models are in repo/programmingalpha/models. </li>
+<li>The evaluation metiric tool APIs are in repo/programmingalpha/Utility/metrics.py. </li>
+<li>Run the scripts in repo/test/db_test/ folder to prepare training data. </li>
+<li>Run the scripts in repo/test/text_generation_test/ to build the model mentioned in AnsAlpha. </li>
 </ul>
 
 
@@ -70,7 +70,7 @@ Our training data from 4 online Q&A forums currently consists of Stack Overflow,
 Build a MongoDB cluster and put all the data needed to the Database. Then deploy the elastic search engine on top of your database cluster.
 </li>
 <li>
-Make the dirs listed in ProgrammingAlpha/programmingalpha/__init__.py.
+Make the dirs listed in repo/programmingalpha/__init__.py.
 </li>
 </ul>
 
@@ -91,10 +91,10 @@ Prepare the training Data
 <p><strong>Training Data for AnsAlpha</strong></p>
   <ul>
   <li>
-  Run ProgrammingAlpha/test/db_test/gen_corpus_seq2seq.py and push the generated corpus to mongodb cluster.
+  Run repo/test/db_test/gen_corpus_seq2seq.py and push the generated corpus to mongodb cluster.
   </li>
   <li>
-  Run ProgrammingAlpha/test/db_test/gen_samples.py with task parameter as 'seq2seq' to sample training and validating data.
+  Run repo/test/db_test/gen_samples.py with task parameter as 'seq2seq' to sample training and validating data.
   </li>
   <li>
   Leverage the code snippets in OpenNMT package and generate training data. Instructions can be found here http://opennmt.net/OpenNMT-py/options/preprocess.html.
@@ -106,7 +106,7 @@ Prepare the training Data
 <p><strong>Build Local Knowledge Base</strong></p>
   <ul>
   <li>
-  Run ProgrammingAlpha/test/db_test/buildQAIndexer.py firstly to gather all answers to each question.
+  Run repo/test/db_test/buildQAIndexer.py firstly to gather all answers to each question.
   </li>
   <li>
   Push the knowledge units data to mongoDB cluster.
@@ -121,10 +121,10 @@ Train Neural Network Models
 <p><strong>Build Text Generation Models (e.g. AnswerNet)</strong></p>
 <ul>
 <li>
-Run ProgrammingAlpha/test/text_generation_test/build_copy_transformer.py to begin teacher forcing training of AnswerNet.
+Run repo/test/text_generation_test/build_copy_transformer.py to begin teacher forcing training of AnswerNet.
 </li>
 <li>
-Run ProgrammingAlpha/test/text_generation_test/build_rl_transformer.py to start training AnswerNet using reinforcement learning.
+Run repo/test/text_generation_test/build_rl_transformer.py to start training AnswerNet using reinforcement learning.
 </li>
 <li>
 To train a text generation model with other networks, a quick start can be followed in http://opennmt.net/OpenNMT-py/options/train.html.
@@ -140,17 +140,17 @@ Other optional networks for text generation is also available in https://github.
 Evaluate the Model Performance
 </h2>
 <p><strong>
- Evaluate the AnsAlpha 
+ Evaluate the HintMiner 
 </strong></p>
 <ul>
 <li>
 Sample 2000 solved questions via runining "ProgrammingAlpha/test/db_test/gen_samples.py --maxSize 2000 --task seq2seq" or unsolved questions via ProgrammingAlpha/test/db_test/unsolved_seq2seq.py. Or you can directly invoke the Google Custom Search Engine after including the 4 online forums mentioned before.
 </li>
 <li>
-After finishing training the AnswerNet and other text generation models, use ProgrammingAlpha/test/text_generation_test/run_inference.sh or ProgrammingAlpha/test/text_generation_test/transformerinference.py to generate answers to the sampled questions.
+After finishing training the AnswerNet and other text generation models, use ProgrammingAlpha/test/text_generation_test/run_inference.sh or repo/test/text_generation_test/transformerinference.py to generate answers to the sampled questions.
 </li>
 <li>
-Run ProgrammingAlpha/test/utilities_test/computeScore.py true_answers.file generated_answers.file to get the evaluation BLEU/ROUGUE-2 score.
+Run repo/test/utilities_test/computeScore.py true_answers.file generated_answers.file to get the evaluation BLEU/ROUGUE-2 score.
 </li>
 <li>
 We also have conducted a simple user survey using online web here https://wj.qq.com/s2/3597786/b668/.
@@ -184,7 +184,7 @@ Deploying AnsAlpha
 <p><strong>User Interface</strong></p>
 <ul>
 <li>
-We currently implemented a very simple answering outlook asking box, which is available in https://github.com/AnonymousAuthor2013/ProgrammingAlpha/tree/master/alphaservices.
+We currently implemented a very simple answering outlook asking box, which is available in https://github.com/AnonymousAuthor2013/HintMiner/tree/master/alphaservices.
 </li>
 <li>
 The restful API for text-generation network can be started following instrcutions here http://forum.opennmt.net/t/simple-opennmt-py-rest-server/1392. 
